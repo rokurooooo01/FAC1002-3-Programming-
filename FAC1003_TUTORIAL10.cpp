@@ -10,6 +10,7 @@ void pauseBeforeMenu() {
     cin.get(); 
 }
 
+// QUESTION 1: Kinetic Energy
 void calculateKineticEnergy(double m, double v) {
     double ke = 0.5 * m * pow(v, 2);
     cout << "The kinetic energy is " << ke << " Joules.\n";
@@ -25,6 +26,7 @@ void handleQ1() {
     calculateKineticEnergy(mass, velocity);
 }
 
+// QUESTION 2: Sum of Factorial Series
 double factorial(int n) {
     double fact = 1;
     for (int i = 1; i <= n; i++) {
@@ -49,6 +51,7 @@ void handleQ2() {
     cout << "The sum of the series is: " << sumOfSeries(n) << "\n";
 }
 
+// QUESTION 3: Particle Motion
 void printKinematicsTable() {
     cout << "\n--- Question 3: Particle Motion ---\n";
     cout << left << setw(10) << "Time (s)" 
@@ -70,6 +73,7 @@ void printKinematicsTable() {
     }
 }
 
+// QUESTION 4: Mean & Standard Deviation
 double calcAverage(double x1, double x2, double x3, double x4) {
     return (x1 + x2 + x3 + x4) / 4.0;
 }
@@ -107,6 +111,7 @@ void handleQ4() {
     }
 }
 
+// QUESTION 5: Fuel Consumption
 double calculateFuel(int distance) {
     return (6.8 / 102.0) * distance;
 }
@@ -126,6 +131,7 @@ void handleQ5() {
     }
 }
 
+// QUESTION 6: Instantaneous Acceleration
 double kiraPecutan(double t) {
     return 8 + 12 * t - 48 * pow(t, 2);
 }
@@ -141,6 +147,7 @@ void paparJadual() {
     }
 }
 
+// MAIN MENU
 int main() {
     int choice;
     
