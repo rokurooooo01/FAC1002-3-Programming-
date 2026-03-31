@@ -6,16 +6,12 @@ using namespace std;
 
 const double PI = 3.14159;
 
-// Helper function to pause before showing the menu again
 void pauseBeforeMenu() {
     cout << "\n[Press ENTER to return to the main menu...]";
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Clear the input buffer
-    cin.get(); // Wait for user to press Enter
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+    cin.get(); 
 }
 
-// ==========================================
-// QUESTION 1: Absolute Value
-// ==========================================
 void handleQ1() {
     cout << "\n--- Question 1: Find Absolute Value ---\n";
     int num;
@@ -24,9 +20,6 @@ void handleQ1() {
     cout << "The absolute value is: " << abs(num) << "\n";
 }
 
-// ==========================================
-// QUESTION 2: Divide Two Integers
-// ==========================================
 double divideNumbers(int a, int b) {
     if (b == 0) {
         cout << "Error: Cannot divide by zero. ";
@@ -43,9 +36,6 @@ void handleQ2() {
     cout << "The division result is: " << divideNumbers(num1, num2) << "\n";
 }
 
-// ==========================================
-// QUESTION 4: Area of Circle
-// ==========================================
 double calculateArea(double radius) {
     return PI * pow(radius, 2);
 }
@@ -58,9 +48,6 @@ void handleQ4() {
     cout << "The area of the circle is: " << calculateArea(radius) << "\n";
 }
 
-// ==========================================
-// QUESTION 6: Average of Two Numbers
-// ==========================================
 float calculateAverage(float num1, float num2) {
     return (num1 + num2) / 2.0f;
 }
@@ -73,9 +60,6 @@ void handleQ6() {
     cout << "The average is: " << calculateAverage(val1, val2) << "\n";
 }
 
-// ==========================================
-// QUESTION 8: Conditional Multiply/Divide
-// ==========================================
 double multiplyQ8(double a, double b) {
     return a * b;
 }
@@ -103,14 +87,10 @@ void handleQ8() {
     }
 }
 
-// ==========================================
-// MAIN MENU
-// ==========================================
 int main() {
     int choice;
     
     do {
-        // Display the menu
         cout << "\n========================================\n";
         cout << "        FAC1003 Tutorial 9 Menu         \n";
         cout << "========================================\n";
@@ -123,10 +103,8 @@ int main() {
         cout << "----------------------------------------\n";
         cout << "Enter your choice (0-5): ";
         
-        // Take user input
         cin >> choice;
         
-        // Execute the chosen question
         switch (choice) {
             case 1: 
                 handleQ1(); 
@@ -153,13 +131,12 @@ int main() {
                 break;
             default: 
                 cout << "\nInvalid choice. Please enter a number between 0 and 5.\n";
-                // Only clear buffer on invalid input to prevent infinite loops if a letter is typed
                 cin.clear();
                 cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 pauseBeforeMenu();
         }
         
-    } while (choice != 0); // Loop until the user enters 0
+    } while (choice != 0); 
     
     return 0;
 }
